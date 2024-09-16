@@ -72,11 +72,22 @@ export default function DashSidebar() {
             <Sidebar.Item
               active={tab === 'posts'}
               icon={HiDocumentText}
-            //   label={currentUser.isAdmin? 'Admin' : 'Posts'}
               labelColor='dark'
               as='div'
             >
               Posts
+            </Sidebar.Item>
+          </Link>
+          }
+          {currentUser.isAdmin &&
+          <Link to='/dashboard?tab=users'>
+            <Sidebar.Item
+              active={tab === 'posts'}
+              icon={HiOutlineUserGroup}
+              labelColor='dark'
+              as='div'
+            >
+              Users
             </Sidebar.Item>
           </Link>
           }
